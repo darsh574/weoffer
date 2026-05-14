@@ -1168,7 +1168,7 @@ img, svg, video {
   letter-spacing: -0.06em;
   text-align: center;
   -webkit-text-stroke: 1px rgba(255,255,255,0.18);
-  color: transparent;
+  color: #ffffff;
   pointer-events: none;
   margin-bottom: -0.18em;
   padding-top: 1rem;

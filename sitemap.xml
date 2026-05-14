@@ -17,7 +17,7 @@
 
   <url>
     <loc>https://weoffer.in/blog</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -39,6 +39,27 @@
   <url>
     <loc>https://weoffer.in/blog/custom-tools-build-vs-buy</loc>
     <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://weoffer.in/blog/custom-internal-tool-cost</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://weoffer.in/blog/no-code-vs-custom-internal-tools</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://weoffer.in/blog/workflow-automation-examples</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
