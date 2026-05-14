@@ -1,0 +1,12 @@
+# WeOffer Growth - robots.txt
+User-agent: *
+Allow: /
+
+# Block private / dev paths
+Disallow: /apps-script.gs
+Disallow: /*.gs$
+
+# Block crawl of marketing query strings (utm_*) - they are duplicate content
+Disallow: /*?utm_
+
+Sitemap: https://weoffer.in/sitemap.xml

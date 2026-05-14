@@ -1,0 +1,152 @@
+# =============================================================
+#  WeOffer Growth — Apache config for Hostinger
+# =============================================================
+#  Order matters here. Read top-to-bottom. Most things are
+#  no-touch defaults; the few you may want to change are
+#  marked with #  EDIT
+# =============================================================
+
+Options -Indexes -MultiViews
+ServerSignature Off
+DirectoryIndex index.html
+
+# -------------------------------------------------------------
+# 1. Force HTTPS + canonical host (non-www)
+# -------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Force non-www  (flip the rule below if you prefer www.* canonical)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # ---------------------------------------------------------
+  # Legacy URL redirects (preserve old inbound links)
+  # ---------------------------------------------------------
+  RewriteRule ^landing/?$           /free-audit            [R=301,L]
+  RewriteRule ^landing\.html$       /free-audit            [R=301,L]
+
+  # ---------------------------------------------------------
+  # 2. Clean URLs — strip .html
+  # ---------------------------------------------------------
+  # 2a. Externally redirect /foo.html  →  /foo  (301)
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L,NE]
+
+  # 2b. Internally rewrite /foo  →  /foo.html  (so files still resolve)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # 2c. Strip trailing slashes on non-directories
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+</IfModule>
+
+# -------------------------------------------------------------
+# 3. Custom error pages
+# -------------------------------------------------------------
+ErrorDocument 404 /index.html
+
+# -------------------------------------------------------------
+# 4. Block access to dev / private files
+# -------------------------------------------------------------
+<FilesMatch "\.(gs|md|yml|yaml|env|log|bak|sql|sh|ps1)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  # Hide backup + old folders from being served directly
+  RewriteRule ^_backup(/.*)?$ - [F,L]
+  RewriteRule ^old(/.*)?$ - [F,L]
+  RewriteRule ^dist(/.*)?$ - [F,L]
+</IfModule>
+
+# Block hidden files/dirs (.git, .DS_Store, .env, .htaccess itself, etc.)
+<FilesMatch "(^\.|/\.)">
+  Require all denied
+</FilesMatch>
+
+# -------------------------------------------------------------
+# 5. Security headers
+# -------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+
+  # Don't cache HTML aggressively (so copy edits go live fast)
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+</IfModule>
+
+# -------------------------------------------------------------
+# 6. GZIP / DEFLATE compression
+# -------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/ld+json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE image/svg+xml image/x-icon
+  AddOutputFilterByType DEFLATE font/woff font/woff2 application/font-woff application/font-woff2
+</IfModule>
+
+# -------------------------------------------------------------
+# 7. Browser caching
+# -------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                          "access plus 1 month"
+
+  # HTML — short, so updates ship fast
+  ExpiresByType text/html                 "access plus 0 seconds"
+
+  # CSS / JS
+  ExpiresByType text/css                  "access plus 1 month"
+  ExpiresByType application/javascript    "access plus 1 month"
+  ExpiresByType text/javascript           "access plus 1 month"
+
+  # Images / icons
+  ExpiresByType image/jpeg                "access plus 6 months"
+  ExpiresByType image/png                 "access plus 6 months"
+  ExpiresByType image/webp                "access plus 6 months"
+  ExpiresByType image/svg+xml             "access plus 6 months"
+  ExpiresByType image/x-icon              "access plus 1 year"
+
+  # Fonts (rare to change)
+  ExpiresByType font/woff                 "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType application/font-woff     "access plus 1 year"
+  ExpiresByType application/font-woff2    "access plus 1 year"
+
+  # Feeds / data
+  ExpiresByType application/json          "access plus 0 seconds"
+  ExpiresByType application/xml           "access plus 0 seconds"
+  ExpiresByType text/xml                  "access plus 0 seconds"
+</IfModule>
+
+# -------------------------------------------------------------
+# 8. Proper MIME types
+# -------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/svg+xml          .svg
+  AddType application/json       .json
+  AddType application/ld+json    .jsonld
+  AddType font/woff2             .woff2
+  AddType font/woff              .woff
+  AddType image/x-icon           .ico
+</IfModule>
+
+# -------------------------------------------------------------
+# 9. UTF-8 default
+# -------------------------------------------------------------
+AddDefaultCharset UTF-8

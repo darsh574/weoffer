@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=3" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/favicon.svg" color="#000000" />
+  <title>WeOffer Growth | Automation, AI &amp; Custom Tools for Any Business</title>
+  <meta name="description" content="WeOffer Growth builds automation, AI, and custom tools that help brands, real estate firms, agencies, and businesses of every kind grow with fewer resources." />
+  <meta name="theme-color" content="#000000" />
+  <meta name="author" content="WeOffer Growth" />
+  <meta name="keywords" content="automation agency, AI development, custom tools, workflow automation, AI agents, business automation, n8n, Make, Zapier, Pune, India" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://weoffer.in/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://weoffer.in/" />
+  <meta property="og:site_name" content="WeOffer Growth" />
+  <meta property="og:title" content="WeOffer Growth | Automation, AI &amp; Custom Tools" />
+  <meta property="og:description" content="One focused service: we build automation, AI systems, and custom tools that help any business grow with fewer resources." />
+  <meta property="og:image" content="https://weoffer.in/assets/logo.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WeOffer Growth | Automation, AI &amp; Custom Tools" />
+  <meta name="twitter:description" content="One focused service: we build automation, AI systems, and custom tools that help any business grow with fewer resources." />
+  <meta name="twitter:image" content="https://weoffer.in/assets/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WeOffer Growth",
+    "url": "https://weoffer.in/",
+    "description": "Automation, AI, and custom tools for any business.",
+    "publisher": { "@type": "Organization", "name": "WeOffer Growth" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://weoffer.in/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WeOffer Growth",
+    "url": "https://weoffer.in/",
+    "logo": "https://weoffer.in/assets/logo.png",
+    "email": "weoffer.info@gmail.com",
+    "telephone": "+91-9881368336",
+    "description": "WeOffer Growth builds automation, AI systems, and custom tools that help businesses grow with fewer resources.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" },
+    "areaServed": "Worldwide",
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WeOffer Growth",
+    "image": "https://weoffer.in/assets/logo.png",
+    "url": "https://weoffer.in/",
+    "telephone": "+91-9881368336",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" },
+    "serviceType": [
+      "Workflow Automation",
+      "AI Systems and Agents",
+      "Custom Internal Tools and Dashboards"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body class="noise-bg">
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__mark">WO/</div>
+      <div class="loader__count"><span id="loader-count">0</span><span class="loader__pct">%</span></div>
+      <div class="loader__bar"><span class="loader__bar-fill" id="loader-bar"></span></div>
+      <div class="loader__label">Calibrating systems</div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label" id="cursor-label"></span></div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a
+    href="https://wa.me/919881368336?text=Hi%20WeOffer%2C%20I%27d%20like%20to%20talk%20about%20automation%20for%20my%20business."
+    class="wa-fab"
+    target="_blank"
+    rel="noopener"
+    data-cursor="link"
+    aria-label="Chat with us on WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+      <path fill="#fff" d="M19.11 17.39c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.07-.16.18-.31.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.13-.13.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.28 0 1.34.98 2.63 1.11 2.81.14.18 1.93 2.94 4.67 4.13.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.18.16-1.28-.06-.11-.25-.18-.52-.31zM16 5.33C10.11 5.33 5.33 10.1 5.33 16c0 1.87.49 3.69 1.42 5.3L5.39 26.67l5.47-1.43A10.6 10.6 0 0 0 16 26.67c5.89 0 10.67-4.78 10.67-10.67S21.89 5.33 16 5.33zm0 19.55c-1.66 0-3.28-.44-4.71-1.27l-.34-.2-3.5.92.93-3.42-.22-.35A8.86 8.86 0 1 1 16 24.88z"/>
+    </svg>
+    <span class="wa-fab__label">Chat with us</span>
+    <span class="wa-fab__pulse" aria-hidden="true"></span>
+  </a>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <a href="#top" class="site-header__brand" data-cursor="link" aria-label="WeOffer Growth, home">
+      <img src="/assets/logo.png" alt="WeOffer Growth" class="brand__logo" width="250" height="100" />
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="#service" data-cursor="link"><span>What we do</span></a>
+      <a href="#process" data-cursor="link"><span>Process</span></a>
+      <a href="#industries" data-cursor="link"><span>Who it's for</span></a>
+      <a href="#contact" data-cursor="link"><span>Contact</span></a>
+    </nav>
+
+    <a href="#contact" class="site-header__cta magnetic" data-cursor="button">
+      <span class="btn__inner">
+        <span class="btn__label">Start a project</span>
+        <span class="btn__label btn__label--alt">Let's talk</span>
+      </span>
+      <span class="btn__arrow" aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__overline reveal" data-reveal="fade-up">
+        <span class="dot"></span>
+        <span>WeOffer Growth · for any business</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="word" data-split>Less</span> <span class="word italic" data-split>work.</span></span>
+        <span class="line"><span class="word outlined" data-split>More</span> <span class="word" data-split>business.</span></span>
+      </h1>
+
+      <div class="hero__meta">
+        <p class="hero__sub reveal" data-reveal="fade-up">
+          Automation, AI and custom tools, engineered to grow your business with fewer hands.
+        </p>
+
+        <div class="hero__ctas reveal" data-reveal="fade-up">
+          <a href="#contact" class="btn btn--solid magnetic" data-cursor="button">
+            <span class="btn__inner">
+              <span class="btn__label">Start a project</span>
+              <span class="btn__label btn__label--alt">Let's build</span>
+            </span>
+            <span class="btn__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#service" class="btn btn--ghost magnetic" data-cursor="button">
+            <span class="btn__inner">
+              <span class="btn__label">What we do</span>
+              <span class="btn__label btn__label--alt">Explore</span>
+            </span>
+            <span class="btn__arrow" aria-hidden="true">↘</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="#marquee" class="hero__scroll" data-cursor="hide" aria-label="Scroll to discover">
+        <span class="hero__scroll-label">Scroll to discover</span>
+        <span class="hero__scroll-line"><span></span></span>
+      </a>
+
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-grid"></div>
+        <div class="hero__bg-glow"></div>
+        <div class="hero__bg-orb"></div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Workflow Automation</span><span class="dot-sep">●</span>
+          <span>AI Agents</span><span class="dot-sep">●</span>
+          <span>Custom Internal Tools</span><span class="dot-sep">●</span>
+          <span>CRM Pipelines</span><span class="dot-sep">●</span>
+          <span>Lead Engines</span><span class="dot-sep">●</span>
+          <span>Chatbots &amp; Assistants</span><span class="dot-sep">●</span>
+          <span>API Integrations</span><span class="dot-sep">●</span>
+          <span>Make &amp; n8n</span><span class="dot-sep">●</span>
+          <span>Document AI</span><span class="dot-sep">●</span>
+          <span>Dashboards</span><span class="dot-sep">●</span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Workflow Automation</span><span class="dot-sep">●</span>
+          <span>AI Agents</span><span class="dot-sep">●</span>
+          <span>Custom Internal Tools</span><span class="dot-sep">●</span>
+          <span>CRM Pipelines</span><span class="dot-sep">●</span>
+          <span>Lead Engines</span><span class="dot-sep">●</span>
+          <span>Chatbots &amp; Assistants</span><span class="dot-sep">●</span>
+          <span>API Integrations</span><span class="dot-sep">●</span>
+          <span>Make &amp; n8n</span><span class="dot-sep">●</span>
+          <span>Document AI</span><span class="dot-sep">●</span>
+          <span>Dashboards</span><span class="dot-sep">●</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifesto / Section intro -->
+    <section class="manifesto">
+      <div class="section__head">
+        <span class="eyebrow reveal" data-reveal="fade-up"><i></i> The single thing we do</span>
+        <h2 class="manifesto__title">
+          <span class="reveal-mask"><span class="reveal-mask__inner">One service.</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner italic">Engineered well.</span></span>
+        </h2>
+      </div>
+
+      <p class="manifesto__lede reveal" data-reveal="fade-up">
+        We build <a href="/blog/automation-for-real-estate"><em>workflow automations</em></a>, <a href="/blog/ai-agents-for-business"><em>AI systems</em></a>, and <a href="/blog/custom-tools-build-vs-buy"><em>custom tools</em></a> that quietly do the heavy lifting, so your team does less and your business does more.
+      </p>
+    </section>
+
+    <!-- Service / Pillars -->
+    <section class="service" id="service">
+      <div class="service__sticky">
+        <div class="service__label reveal" data-reveal="fade-up">
+          <span class="dot"></span><span>What we engineer</span>
+        </div>
+        <h3 class="service__heading">
+          <span class="reveal-mask"><span class="reveal-mask__inner">Automation, AI</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner outlined">&amp; custom tools.</span></span>
+        </h3>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar" data-pillar="01">
+          <header>
+            <span class="pillar__num">01 /</span>
+            <h4>Workflow Automation</h4>
+          </header>
+          <p>Wire your apps into pipelines that run themselves. No more copy-paste, no more follow-ups falling through.</p>
+          <ul class="pillar__bullets">
+            <li>n8n, Make, Zapier flows</li>
+            <li>CRM &amp; sales handoffs</li>
+            <li>Auto reports &amp; alerts</li>
+          </ul>
+        </article>
+
+        <article class="pillar" data-pillar="02">
+          <header>
+            <span class="pillar__num">02 /</span>
+            <h4>AI Systems &amp; Agents</h4>
+          </header>
+          <p>Useful AI, not demos. Agents that qualify leads, read documents, and reply in your voice.</p>
+          <ul class="pillar__bullets">
+            <li>Lead &amp; support agents</li>
+            <li>Voice &amp; chat assistants</li>
+            <li>Document &amp; PDF intelligence</li>
+          </ul>
+        </article>
+
+        <article class="pillar" data-pillar="03">
+          <header>
+            <span class="pillar__num">03 /</span>
+            <h4>Custom Tools &amp; Dashboards</h4>
+          </header>
+          <p>The internal tool you've been faking in spreadsheets, built properly. No SaaS rent. You own it.</p>
+          <ul class="pillar__bullets">
+            <li>Admin tools &amp; portals</li>
+            <li>Live ops dashboards</li>
+            <li>Booking &amp; intake systems</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Outcomes / Numbers -->
+    <section class="outcomes">
+      <div class="outcomes__grid">
+        <div class="outcome reveal" data-reveal="fade-up">
+          <div class="outcome__num" data-count="60" data-suffix="%">0%</div>
+          <div class="outcome__label">Less manual busywork</div>
+        </div>
+        <div class="outcome reveal" data-reveal="fade-up">
+          <div class="outcome__num" data-count="3" data-suffix="x">0x</div>
+          <div class="outcome__label">Faster ops cycles</div>
+        </div>
+        <div class="outcome reveal" data-reveal="fade-up">
+          <div class="outcome__num" data-count="100" data-prefix="+">0</div>
+          <div class="outcome__label">Hours freed / month</div>
+        </div>
+        <div class="outcome reveal" data-reveal="fade-up">
+          <div class="outcome__num" data-count="1" data-suffix="">1</div>
+          <div class="outcome__label">Focused service, done right</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+      <div class="section__head">
+        <span class="eyebrow reveal" data-reveal="fade-up"><i></i> How we work</span>
+        <h2 class="process__title">
+          <span class="reveal-mask"><span class="reveal-mask__inner">From mess</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner italic">to system,</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner outlined">in four moves.</span></span>
+        </h2>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal" data-reveal="fade-up">
+          <span class="step__num">01</span>
+          <div class="step__body">
+            <h5>Discover</h5>
+            <p>We map where hours leak: repetitive tasks, hand-offs, missed leads.</p>
+          </div>
+          <span class="step__hint">Week 1</span>
+        </li>
+        <li class="step reveal" data-reveal="fade-up">
+          <span class="step__num">02</span>
+          <div class="step__body">
+            <h5>Design</h5>
+            <p>We scope the smallest build that moves the needle. You sign off before we write code.</p>
+          </div>
+          <span class="step__hint">Week 1–2</span>
+        </li>
+        <li class="step reveal" data-reveal="fade-up">
+          <span class="step__num">03</span>
+          <div class="step__body">
+            <h5>Build</h5>
+            <p>We engineer it end-to-end and slot it into your stack. Tested on real data.</p>
+          </div>
+          <span class="step__hint">Week 2–4</span>
+        </li>
+        <li class="step reveal" data-reveal="fade-up">
+          <span class="step__num">04</span>
+          <div class="step__body">
+            <h5>Scale</h5>
+            <p>Hand-over, training, and ongoing support as your business grows.</p>
+          </div>
+          <span class="step__hint">Ongoing</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Industries -->
+    <section class="industries" id="industries">
+      <div class="section__head">
+        <span class="eyebrow reveal" data-reveal="fade-up"><i></i> Built for any business</span>
+        <h2 class="industries__title">
+          <span class="reveal-mask"><span class="reveal-mask__inner">Any business.</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner italic outlined">Quietly upgraded.</span></span>
+        </h2>
+      </div>
+
+      <div class="industries__list">
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/01</span>
+          <span class="ind-row__name">Brands &amp; D2C</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/02</span>
+          <span class="ind-row__name">Real Estate</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/03</span>
+          <span class="ind-row__name">Agencies &amp; Studios</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/04</span>
+          <span class="ind-row__name">Hotels, Salons &amp; Services</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/05</span>
+          <span class="ind-row__name">Education &amp; Coaching</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+        <div class="ind-row reveal" data-reveal="fade-up">
+          <span class="ind-row__num">/06</span>
+          <span class="ind-row__name">Anything else, honestly</span>
+          <span class="ind-row__arrow">↗</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Big text strip -->
+    <section class="bigstrip" aria-hidden="true">
+      <h3 class="bigstrip__line">
+        <span class="outlined">we&nbsp;turn</span> complexity
+      </h3>
+      <h3 class="bigstrip__line">
+        into <span class="italic">momentum.</span>
+      </h3>
+    </section>
+
+    <!-- Notes / Blog teaser (interlinking) -->
+    <section class="notes" id="notes" aria-labelledby="notes-title">
+      <div class="section__head notes__head">
+        <span class="eyebrow reveal" data-reveal="fade-up"><i></i> Notes from the studio</span>
+        <h2 class="notes__title" id="notes-title">
+          <span class="reveal-mask"><span class="reveal-mask__inner">Short reads on</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner italic">automation, AI &amp; tools.</span></span>
+        </h2>
+        <a href="/blog" class="notes__all" data-cursor="link">All notes ↗</a>
+      </div>
+
+      <div class="notes__grid">
+        <a href="/blog/automation-for-real-estate" class="note reveal" data-reveal="fade-up" data-cursor="link">
+          <div class="note__meta"><span>Real Estate</span><span>5 min</span></div>
+          <h3 class="note__title">How real estate businesses use <em>automation</em> to close more deals</h3>
+          <p class="note__excerpt">The lead-to-site-visit flow that quietly does the work of a full-time salesperson.</p>
+          <span class="note__arrow">↗</span>
+        </a>
+        <a href="/blog/ai-agents-for-business" class="note reveal" data-reveal="fade-up" data-cursor="link">
+          <div class="note__meta"><span>AI Systems</span><span>6 min</span></div>
+          <h3 class="note__title"><em>AI agents</em> for business: what they are, what they are worth</h3>
+          <p class="note__excerpt">Where an agent earns its keep, and where it is just an expensive demo.</p>
+          <span class="note__arrow">↗</span>
+        </a>
+        <a href="/blog/custom-tools-build-vs-buy" class="note reveal" data-reveal="fade-up" data-cursor="link">
+          <div class="note__meta"><span>Custom Tools</span><span>5 min</span></div>
+          <h3 class="note__title"><em>Custom internal tools</em>: when to build instead of buy</h3>
+          <p class="note__excerpt">A four-question test to know if you should keep paying SaaS rent.</p>
+          <span class="note__arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="contact" id="contact">
+      <div class="contact__top">
+        <span class="eyebrow"><i></i> Let's build something</span>
+        <h2 class="contact__title">
+          <span class="reveal-mask"><span class="reveal-mask__inner">Tell us what's</span></span>
+          <span class="reveal-mask"><span class="reveal-mask__inner italic">eating your hours.</span></span>
+        </h2>
+        <p class="contact__sub reveal" data-reveal="fade-up">Tell us what's slow. We reply within a day with what we'd build and how long it'll take.</p>
+      </div>
+
+      <form class="contact__form" id="contact-form" novalidate data-sheet="https://script.google.com/macros/s/AKfycbziIrWi_JVahZsFMwWjCQhR1KjahE7bg1vA72_S55XCIXeIJJCGspNjIziSyV0-B-r9nA/exec">
+        <div class="field">
+          <input type="text" id="f-name" name="name" required autocomplete="name" placeholder=" " />
+          <label for="f-name">Your name</label>
+          <span class="field__line"></span>
+        </div>
+        <div class="field">
+          <input type="email" id="f-email" name="email" required autocomplete="email" placeholder=" " />
+          <label for="f-email">Email</label>
+          <span class="field__line"></span>
+        </div>
+        <div class="field">
+          <input type="text" id="f-business" name="business" autocomplete="organization" placeholder=" " />
+          <label for="f-business">Business / Industry</label>
+          <span class="field__line"></span>
+        </div>
+        <div class="field field--full">
+          <textarea id="f-msg" name="message" rows="3" required placeholder=" "></textarea>
+          <label for="f-msg">What would you like us to automate, AI-ify, or build?</label>
+          <span class="field__line"></span>
+        </div>
+
+        <button type="submit" class="btn btn--solid btn--big magnetic" data-cursor="button">
+          <span class="btn__inner">
+            <span class="btn__label">Send it over</span>
+            <span class="btn__label btn__label--alt">→ Submit</span>
+          </span>
+          <span class="btn__arrow" aria-hidden="true">↗</span>
+        </button>
+
+        <div class="contact__or">or just email us</div>
+        <a href="mailto:weoffer.info@gmail.com" class="contact__mail magnetic" data-cursor="link">
+          weoffer.info@gmail.com
+        </a>
+
+        <div class="contact__success" id="contact-success" hidden>
+          <span class="lp-tick lp-tick--lg">✓</span>
+          <h3>Got it.</h3>
+          <p>We'll reply within one working day.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <img src="/assets/logo.png" alt="WeOffer Growth" class="brand__logo brand__logo--lg" width="250" height="100" />
+          <p>WeOffer Growth is an engineering studio in Pune building <a href="/free-audit">workflow automation</a>, <a href="/blog/ai-agents-for-business">AI agents</a>, and <a href="/blog/custom-tools-build-vs-buy">custom internal tools</a> for businesses that want to grow without growing the payroll.</p>
+        </div>
+
+        <nav class="site-footer__cols" aria-label="Footer">
+          <div>
+            <h6>Service</h6>
+            <a href="/free-audit" data-cursor="link">Free audit</a>
+            <a href="#service" data-cursor="link">Workflow Automation</a>
+            <a href="#service" data-cursor="link">AI Systems</a>
+            <a href="#service" data-cursor="link">Custom Tools</a>
+          </div>
+          <div>
+            <h6>Studio</h6>
+            <a href="#process" data-cursor="link">Process</a>
+            <a href="#industries" data-cursor="link">Who it's for</a>
+            <a href="/blog" data-cursor="link">Notes / Blog</a>
+            <a href="#contact" data-cursor="link">Contact</a>
+          </div>
+          <div>
+            <h6>Reach us</h6>
+            <a href="mailto:weoffer.info@gmail.com" data-cursor="link">weoffer.info@gmail.com</a>
+            <a href="https://wa.me/919881368336" target="_blank" rel="noopener" data-cursor="link">WhatsApp</a>
+            <a href="#top" data-cursor="link">Back to top ↑</a>
+          </div>
+          <div>
+            <h6>Legal</h6>
+            <a href="/privacy" data-cursor="link">Privacy Policy</a>
+            <a href="/terms" data-cursor="link">Terms of Service</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© <span id="year">2026</span> WeOffer Growth. All rights reserved.</span>
+        <span>Engineered in Pune.</span>
+      </div>
+
+      <div class="site-footer__giant" aria-hidden="true">WeOffer</div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="/assets/script.js" defer></script>
+</body>
+</html>
