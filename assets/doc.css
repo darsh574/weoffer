@@ -5,6 +5,15 @@
 
 .doc-page { background: var(--bg); }
 
+/* Doc/blog pages don't load the custom cursor (that lives in script.js,
+   home + free-audit only). style.css sets `cursor: none` globally, so
+   without this these pages would show no cursor at all. Restore the native one. */
+.doc-page,
+.doc-page a,
+.doc-page button { cursor: auto; }
+.doc-page a,
+.doc-page button { cursor: pointer; }
+
 /* ---------- top bar ---------- */
 .doc-bar {
   position: sticky;
