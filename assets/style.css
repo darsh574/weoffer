@@ -287,6 +287,17 @@ img, svg, video {
   padding: 0.75rem var(--pad-x);
   border-bottom: 1px solid var(--line);
 }
+/* Static header variant for inner pages (blog, docs, landing): they either
+   don't run the scroll-pin JS or shouldn't have content slide under a fixed
+   bar. Sticky + solid background so the shared nav works everywhere. */
+.site-header--static {
+  position: sticky;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem var(--pad-x);
+}
 .site-header__brand {
   display: flex;
   align-items: center;

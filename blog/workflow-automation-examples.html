@@ -64,11 +64,26 @@
 </head>
 <body class="noise-bg doc-page">
 
-  <header class="doc-bar">
-    <a href="/" class="doc-bar__brand" aria-label="WeOffer Growth, home">
+  <!-- Header -->
+  <header class="site-header site-header--static" id="site-header">
+    <a href="/" class="site-header__brand" data-cursor="link" aria-label="WeOffer Growth, home">
       <img src="/assets/logo.png" alt="WeOffer Growth" class="brand__logo" width="250" height="100" />
     </a>
-    <a href="/blog" class="doc-bar__back">All notes ↗</a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="/#service" data-cursor="link"><span>What we do</span></a>
+      <a href="/#process" data-cursor="link"><span>Process</span></a>
+      <a href="/#industries" data-cursor="link"><span>Who it's for</span></a>
+      <a href="/#contact" data-cursor="link"><span>Contact</span></a>
+    </nav>
+
+    <a href="/#contact" class="site-header__cta magnetic" data-cursor="button">
+      <span class="btn__inner">
+        <span class="btn__label">Start a project</span>
+        <span class="btn__label btn__label--alt">Let's talk</span>
+      </span>
+      <span class="btn__arrow" aria-hidden="true">↗</span>
+    </a>
   </header>
 
   <article class="post">
@@ -190,8 +205,49 @@
     </nav>
   </article>
 
-  <footer class="doc-footer">
-    <p>© <span id="year">2026</span> WeOffer Growth · Engineered in Pune · <a href="mailto:weoffer.info@gmail.com">weoffer.info@gmail.com</a></p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <img src="/assets/logo.png" alt="WeOffer Growth" class="brand__logo brand__logo--lg" width="250" height="100" />
+        <p>WeOffer Growth is an engineering studio in Pune building <a href="/free-audit">workflow automation</a>, <a href="/blog/ai-agents-for-business">AI agents</a>, and <a href="/blog/custom-tools-build-vs-buy">custom internal tools</a> for businesses that want to grow without growing the payroll.</p>
+      </div>
+
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div>
+          <h6>Service</h6>
+          <a href="/free-audit" data-cursor="link">Free audit</a>
+          <a href="/#service" data-cursor="link">Workflow Automation</a>
+          <a href="/#service" data-cursor="link">AI Systems</a>
+          <a href="/#service" data-cursor="link">Custom Tools</a>
+        </div>
+        <div>
+          <h6>Studio</h6>
+          <a href="/#process" data-cursor="link">Process</a>
+          <a href="/#industries" data-cursor="link">Who it's for</a>
+          <a href="/blog" data-cursor="link">Notes / Blog</a>
+          <a href="/#contact" data-cursor="link">Contact</a>
+        </div>
+        <div>
+          <h6>Reach us</h6>
+          <a href="mailto:weoffer.info@gmail.com" data-cursor="link">weoffer.info@gmail.com</a>
+          <a href="https://wa.me/919881368336" target="_blank" rel="noopener" data-cursor="link">WhatsApp</a>
+          <a href="/" data-cursor="link">Back to home ↑</a>
+        </div>
+        <div>
+          <h6>Legal</h6>
+          <a href="/privacy" data-cursor="link">Privacy Policy</a>
+          <a href="/terms" data-cursor="link">Terms of Service</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© <span id="year">2026</span> WeOffer Growth. All rights reserved.</span>
+      <span>Engineered in Pune.</span>
+    </div>
+
+    <div class="site-footer__giant" aria-hidden="true">WeOffer</div>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

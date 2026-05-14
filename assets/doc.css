@@ -316,6 +316,19 @@
   transition: color 0.3s, border-color 0.3s;
 }
 .post a:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+/* CTA buttons (.btn) inside posts/docs: the link rules above were hijacking
+   the button — white text on the white solid button, plus a stray underline. */
+.post a.btn,
+.doc a.btn { border-bottom: 0; padding-bottom: 0; }
+.post a.btn--solid,
+.post a.btn--solid:hover,
+.doc a.btn--solid,
+.doc a.btn--solid:hover { color: var(--bg); }
+.post a.btn--ghost,
+.post a.btn--ghost:hover,
+.doc a.btn--ghost,
+.doc a.btn--ghost:hover { color: var(--fg); }
 .post strong { color: var(--fg); font-weight: 600; }
 .post em { color: var(--fg); font-style: italic; }
 .post blockquote {
